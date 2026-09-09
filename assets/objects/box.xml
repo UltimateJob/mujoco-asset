@@ -1,0 +1,8 @@
+<mujoco>
+  <worldbody>
+    <body name="box" pos="-0.7 -1.2 1.26">
+      <joint type="free"/>
+      <geom type="box" size=".03 .03 .08" rgba="0 .9 0 1" friction="2 0.3 0.03"  mass="0.1"/>
+    </body>
+  </worldbody>
+</mujoco>

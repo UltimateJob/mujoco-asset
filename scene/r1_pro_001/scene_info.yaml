@@ -1,0 +1,37 @@
+basic_info:
+  scene_id: r1_pro_001
+  scene_name: R1 Pro 测试场景
+  base_model_path: "./r1_pro_001.xml"
+
+assets:
+  - asset_name: polyhedron
+    position: [1.0, 0.0, 0.5]  
+    rotation: [0, 0, 0] 
+    rgba: [1.0, 0.0, 0.0, 1.0] 
+  - asset_name: box
+
+robots:
+  - robot_name: r1_pro_chassis
+    position: [0, 0, 0.1327993059995052]
+    rotation: [0, 0, 0]
+
+sensors:
+ 
+  - sensor_type: camera
+    sensor_name: camera
+    width: 640
+    height: 480
+    fps: 15
+    flip_horizontal: false
+    flip_vertical: false
+    save_frequency: 10.0
+    buffer_size: 5
+    auto_save_loop_enabled: true
+    max_record_duration: 30.0
+    max_record_frequency: 10.0
+    max_photo_frequency: 1.0
+    storage_quota_mb: 1024.0
+
+simulation_params:
+  timestep: 0.001
+  gravity: [0, 0, -9.81]

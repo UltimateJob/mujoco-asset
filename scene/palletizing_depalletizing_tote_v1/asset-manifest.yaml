@@ -1,0 +1,110 @@
+schema_version: 1
+scene_key: palletizing_depalletizing_tote_v1
+catalog:
+  scene_id: native-r1pro-tote-depalletizing
+  name: R1 Pro 周转箱拆码垛
+  description: R1 Pro 双臂专用夹具与真实周转箱拆码垛场景
+  version: 0.5.0
+  source: mujoco-asset
+  tags:
+  - native-mujoco
+  - depalletizing
+  - r1-pro
+  - tote
+  capabilities:
+  - viewer
+  - rgb
+  - depth
+  - contact
+  - holding
+  authoring:
+    mode: fixed_layout
+layouts:
+  layout001:
+    name: layout001
+    expected_objects:
+    - pallet-a
+    - pallet-b
+    - pallet-b-slot-r1-c1
+    - pallet-b-slot-r1-c2
+    - pallet-b-slot-r2-c1
+    - pallet-b-slot-r2-c2
+    - tote-large-l1-r1-c1
+    - tote-large-l1-r1-c2
+    - tote-large-l1-r2-c1
+    - tote-large-l1-r2-c2
+    - tote-large-l2-r1-c1
+    - tote-large-l2-r1-c2
+    - tote-large-l2-r2-c1
+    - tote-large-l2-r2-c2
+    - tote-large-l3-r1-c1
+    - tote-large-l3-r1-c2
+    - tote-large-l3-r2-c1
+    - tote-large-l3-r2-c2
+  layout002:
+    name: layout002
+    expected_objects:
+    - pallet-a
+    - pallet-b
+    - pallet-b-slot-r1-c1
+    - pallet-b-slot-r1-c2
+    - pallet-b-slot-r2-c1
+    - pallet-b-slot-r2-c2
+    - tote-small-l1-r1-c1
+    - tote-small-l1-r1-c2
+    - tote-small-l1-r2-c1
+    - tote-small-l1-r2-c2
+    - tote-small-l2-r1-c1
+    - tote-small-l2-r1-c2
+    - tote-small-l2-r2-c1
+    - tote-small-l2-r2-c2
+    - tote-small-l3-r1-c1
+    - tote-small-l3-r1-c2
+    - tote-small-l3-r2-c1
+    - tote-small-l3-r2-c2
+  layout003:
+    name: layout003
+    expected_objects:
+    - pallet-a
+    - pallet-b
+    - pallet-b-slot-r1-c1
+    - pallet-b-slot-r1-c2
+    - pallet-b-slot-r2-c1
+    - pallet-b-slot-r2-c2
+    - tote-large-l1-r1-c1
+    - tote-large-l1-r1-c2
+    - tote-large-l1-r2-c1
+    - tote-large-l1-r2-c2
+    - tote-large-l2-r1-c1
+    - tote-large-l2-r1-c2
+    - tote-large-l2-r2-c1
+    - tote-large-l2-r2-c2
+    - tote-large-l3-r1-c1
+    - tote-large-l3-r1-c2
+    - tote-large-l3-r2-c1
+    - tote-large-l3-r2-c2
+    - tote-small-l1-r1-c1
+    - tote-small-l1-r1-c2
+    - tote-small-l1-r2-c1
+    - tote-small-l1-r2-c2
+    - tote-small-l2-r1-c1
+    - tote-small-l2-r1-c2
+    - tote-small-l2-r2-c1
+    - tote-small-l2-r2-c2
+    - tote-small-l3-r1-c1
+    - tote-small-l3-r1-c2
+    - tote-small-l3-r2-c1
+    - tote-small-l3-r2-c2
+  layout_smoke:
+    name: layout_smoke
+    expected_objects:
+    - pallet-a
+    - pallet-b
+    - pallet-b-slot-r1-c1
+    - pallet-b-slot-r1-c2
+    - pallet-b-slot-r2-c1
+    - pallet-b-slot-r2-c2
+    - tote-large-smoke
+robots:
+- model: r1_pro_chassis
+  profile: ../../robot/r1_pro_tote_gripper/config/semantic_robot_profile.yaml

@@ -1,0 +1,18 @@
+<mujoco model="semantic_target_region">
+  <worldbody>
+    <!--
+      目标区域是场景语义标记，不参与碰撞。Layout 可覆盖颜色、尺寸和位姿；
+      这里的默认几何只保证 Scene Package 在没有私有素材时仍可独立加载。
+    -->
+    <body name="target">
+      <geom
+        name="target_visual"
+        type="box"
+        size="0.7 0.7 0.025"
+        rgba="0.25 0.75 0.55 0.38"
+        contype="0"
+        conaffinity="0"
+      />
+    </body>
+  </worldbody>
+</mujoco>

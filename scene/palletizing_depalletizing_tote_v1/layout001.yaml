@@ -1,0 +1,388 @@
+layout_name: layout001
+assets:
+- asset_name: pallet-a
+  asset_model: box
+  position:
+  - 0.0
+  - 1.5
+  - 0.075
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: true
+  interactive: false
+  category: pallet
+  size:
+  - 1.2
+  - 1.0
+  - 0.15
+  rgba:
+  - 0.0
+  - 0.0
+  - 0.3
+  - 1.0
+  collision:
+    contype: 8
+    conaffinity: 5
+- asset_name: pallet-b
+  asset_model: box
+  position:
+  - 1.5
+  - 1.5
+  - 0.075
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: true
+  interactive: false
+  category: pallet
+  size:
+  - 1.2
+  - 1.0
+  - 0.15
+  rgba:
+  - 0.0
+  - 0.0
+  - 0.3
+  - 1.0
+  collision:
+    contype: 8
+    conaffinity: 5
+- asset_name: pallet-b-slot-r1-c1
+  asset_model: target
+  position:
+  - 1.19
+  - 1.29
+  - 0.16
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: true
+  interactive: false
+  category: region
+  properties:
+    row: 1
+    column: 1
+    support_surface_ref: pallet-b
+    support_z_m: 0.15
+    accepted_models:
+    - tote_600x400x340
+    max_layers: 3
+  size:
+  - 0.56
+  - 0.36
+  - 0.02
+  rgba:
+  - 0.25
+  - 0.75
+  - 0.55
+  - 0.28
+- asset_name: pallet-b-slot-r1-c2
+  asset_model: target
+  position:
+  - 1.81
+  - 1.29
+  - 0.16
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: true
+  interactive: false
+  category: region
+  properties:
+    row: 1
+    column: 2
+    support_surface_ref: pallet-b
+    support_z_m: 0.15
+    accepted_models:
+    - tote_600x400x340
+    max_layers: 3
+  size:
+  - 0.56
+  - 0.36
+  - 0.02
+  rgba:
+  - 0.25
+  - 0.75
+  - 0.55
+  - 0.28
+- asset_name: pallet-b-slot-r2-c1
+  asset_model: target
+  position:
+  - 1.19
+  - 1.71
+  - 0.16
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: true
+  interactive: false
+  category: region
+  properties:
+    row: 2
+    column: 1
+    support_surface_ref: pallet-b
+    support_z_m: 0.15
+    accepted_models:
+    - tote_600x400x340
+    max_layers: 3
+  size:
+  - 0.56
+  - 0.36
+  - 0.02
+  rgba:
+  - 0.25
+  - 0.75
+  - 0.55
+  - 0.28
+- asset_name: pallet-b-slot-r2-c2
+  asset_model: target
+  position:
+  - 1.81
+  - 1.71
+  - 0.16
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: true
+  interactive: false
+  category: region
+  properties:
+    row: 2
+    column: 2
+    support_surface_ref: pallet-b
+    support_z_m: 0.15
+    accepted_models:
+    - tote_600x400x340
+    max_layers: 3
+  size:
+  - 0.56
+  - 0.36
+  - 0.02
+  rgba:
+  - 0.25
+  - 0.75
+  - 0.55
+  - 0.28
+- asset_name: tote-large-l1-r1-c1
+  asset_model: tote_600x400x340
+  position:
+  - -0.31
+  - 1.29
+  - 0.152
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l1-r1-c2
+  asset_model: tote_600x400x340
+  position:
+  - 0.31
+  - 1.29
+  - 0.152
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l1-r2-c1
+  asset_model: tote_600x400x340
+  position:
+  - -0.31
+  - 1.71
+  - 0.152
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l1-r2-c2
+  asset_model: tote_600x400x340
+  position:
+  - 0.31
+  - 1.71
+  - 0.152
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l2-r1-c1
+  asset_model: tote_600x400x340
+  position:
+  - -0.31
+  - 1.29
+  - 0.492
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l2-r1-c2
+  asset_model: tote_600x400x340
+  position:
+  - 0.31
+  - 1.29
+  - 0.492
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l2-r2-c1
+  asset_model: tote_600x400x340
+  position:
+  - -0.31
+  - 1.71
+  - 0.492
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l2-r2-c2
+  asset_model: tote_600x400x340
+  position:
+  - 0.31
+  - 1.71
+  - 0.492
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l3-r1-c1
+  asset_model: tote_600x400x340
+  position:
+  - -0.31
+  - 1.29
+  - 0.8320000000000001
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l3-r1-c2
+  asset_model: tote_600x400x340
+  position:
+  - 0.31
+  - 1.29
+  - 0.8320000000000001
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l3-r2-c1
+  asset_model: tote_600x400x340
+  position:
+  - -0.31
+  - 1.71
+  - 0.8320000000000001
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34
+- asset_name: tote-large-l3-r2-c2
+  asset_model: tote_600x400x340
+  position:
+  - 0.31
+  - 1.71
+  - 0.8320000000000001
+  rotation:
+  - 0
+  - 0
+  - 0
+  static: false
+  interactive: true
+  category: tote
+  pose_reference: bottom_center
+  size:
+  - 0.6
+  - 0.4
+  - 0.34

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="tote_530x410x240">
+  <asset>
+    <material name="tote_530x410x240_blue" rgba="0.02 0.22 0.82 1.0" specular="0.22" shininess="0.35" />
+    <mesh name="tote_530x410x240_visual_bottom" file="meshes/tote_530x410x240/visual/bottom.stl" />
+    <mesh name="tote_530x410x240_visual_rib_horizontal_neg" file="meshes/tote_530x410x240/visual/rib_horizontal_neg.stl" />
+    <mesh name="tote_530x410x240_visual_rib_horizontal_pos" file="meshes/tote_530x410x240/visual/rib_horizontal_pos.stl" />
+    <mesh name="tote_530x410x240_visual_rib_neg_0" file="meshes/tote_530x410x240/visual/rib_neg_0.stl" />
+    <mesh name="tote_530x410x240_visual_rib_neg_1" file="meshes/tote_530x410x240/visual/rib_neg_1.stl" />
+    <mesh name="tote_530x410x240_visual_rib_neg_2" file="meshes/tote_530x410x240/visual/rib_neg_2.stl" />
+    <mesh name="tote_530x410x240_visual_rib_neg_3" file="meshes/tote_530x410x240/visual/rib_neg_3.stl" />
+    <mesh name="tote_530x410x240_visual_rib_pos_0" file="meshes/tote_530x410x240/visual/rib_pos_0.stl" />
+    <mesh name="tote_530x410x240_visual_rib_pos_1" file="meshes/tote_530x410x240/visual/rib_pos_1.stl" />
+    <mesh name="tote_530x410x240_visual_rib_pos_2" file="meshes/tote_530x410x240/visual/rib_pos_2.stl" />
+    <mesh name="tote_530x410x240_visual_rib_pos_3" file="meshes/tote_530x410x240/visual/rib_pos_3.stl" />
+    <mesh name="tote_530x410x240_visual_rim_neg_x" file="meshes/tote_530x410x240/visual/rim_neg_x.stl" />
+    <mesh name="tote_530x410x240_visual_rim_neg_y" file="meshes/tote_530x410x240/visual/rim_neg_y.stl" />
+    <mesh name="tote_530x410x240_visual_rim_pos_x" file="meshes/tote_530x410x240/visual/rim_pos_x.stl" />
+    <mesh name="tote_530x410x240_visual_rim_pos_y" file="meshes/tote_530x410x240/visual/rim_pos_y.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_above_groove" file="meshes/tote_530x410x240/visual/wall_neg_above_groove.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_below_groove" file="meshes/tote_530x410x240/visual/wall_neg_below_groove.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_groove_backing" file="meshes/tote_530x410x240/visual/wall_neg_groove_backing.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_groove_ceiling" file="meshes/tote_530x410x240/visual/wall_neg_groove_ceiling.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_groove_end_left" file="meshes/tote_530x410x240/visual/wall_neg_groove_end_left.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_groove_end_right" file="meshes/tote_530x410x240/visual/wall_neg_groove_end_right.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_groove_floor" file="meshes/tote_530x410x240/visual/wall_neg_groove_floor.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_side_left" file="meshes/tote_530x410x240/visual/wall_neg_side_left.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_side_right" file="meshes/tote_530x410x240/visual/wall_neg_side_right.stl" />
+    <mesh name="tote_530x410x240_visual_wall_neg_y" file="meshes/tote_530x410x240/visual/wall_neg_y.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_above_groove" file="meshes/tote_530x410x240/visual/wall_pos_above_groove.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_below_groove" file="meshes/tote_530x410x240/visual/wall_pos_below_groove.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_groove_backing" file="meshes/tote_530x410x240/visual/wall_pos_groove_backing.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_groove_ceiling" file="meshes/tote_530x410x240/visual/wall_pos_groove_ceiling.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_groove_end_left" file="meshes/tote_530x410x240/visual/wall_pos_groove_end_left.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_groove_end_right" file="meshes/tote_530x410x240/visual/wall_pos_groove_end_right.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_groove_floor" file="meshes/tote_530x410x240/visual/wall_pos_groove_floor.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_side_left" file="meshes/tote_530x410x240/visual/wall_pos_side_left.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_side_right" file="meshes/tote_530x410x240/visual/wall_pos_side_right.stl" />
+    <mesh name="tote_530x410x240_visual_wall_pos_y" file="meshes/tote_530x410x240/visual/wall_pos_y.stl" />
+    <mesh name="tote_530x410x240_collision_bottom" file="meshes/tote_530x410x240/collision/bottom.stl" />
+    <mesh name="tote_530x410x240_collision_rim_neg_x" file="meshes/tote_530x410x240/collision/rim_neg_x.stl" />
+    <mesh name="tote_530x410x240_collision_rim_neg_y" file="meshes/tote_530x410x240/collision/rim_neg_y.stl" />
+    <mesh name="tote_530x410x240_collision_rim_pos_x" file="meshes/tote_530x410x240/collision/rim_pos_x.stl" />
+    <mesh name="tote_530x410x240_collision_rim_pos_y" file="meshes/tote_530x410x240/collision/rim_pos_y.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_above_groove" file="meshes/tote_530x410x240/collision/wall_neg_above_groove.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_below_groove" file="meshes/tote_530x410x240/collision/wall_neg_below_groove.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_groove_backing" file="meshes/tote_530x410x240/collision/wall_neg_groove_backing.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_groove_ceiling" file="meshes/tote_530x410x240/collision/wall_neg_groove_ceiling.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_groove_end_left" file="meshes/tote_530x410x240/collision/wall_neg_groove_end_left.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_groove_end_right" file="meshes/tote_530x410x240/collision/wall_neg_groove_end_right.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_groove_floor" file="meshes/tote_530x410x240/collision/wall_neg_groove_floor.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_side_left" file="meshes/tote_530x410x240/collision/wall_neg_side_left.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_side_right" file="meshes/tote_530x410x240/collision/wall_neg_side_right.stl" />
+    <mesh name="tote_530x410x240_collision_wall_neg_y" file="meshes/tote_530x410x240/collision/wall_neg_y.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_above_groove" file="meshes/tote_530x410x240/collision/wall_pos_above_groove.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_below_groove" file="meshes/tote_530x410x240/collision/wall_pos_below_groove.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_groove_backing" file="meshes/tote_530x410x240/collision/wall_pos_groove_backing.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_groove_ceiling" file="meshes/tote_530x410x240/collision/wall_pos_groove_ceiling.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_groove_end_left" file="meshes/tote_530x410x240/collision/wall_pos_groove_end_left.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_groove_end_right" file="meshes/tote_530x410x240/collision/wall_pos_groove_end_right.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_groove_floor" file="meshes/tote_530x410x240/collision/wall_pos_groove_floor.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_side_left" file="meshes/tote_530x410x240/collision/wall_pos_side_left.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_side_right" file="meshes/tote_530x410x240/collision/wall_pos_side_right.stl" />
+    <mesh name="tote_530x410x240_collision_wall_pos_y" file="meshes/tote_530x410x240/collision/wall_pos_y.stl" />
+  </asset>
+  <worldbody>
+    <body name="tote_530x410x240">
+      <freejoint name="tote_530x410x240_freejoint" />
+      <inertial pos="0 0 0.115200" mass="2.500000" diaginertia="0.04702083 0.07052083 0.09354167" />
+      <geom name="tote_530x410x240_visual_bottom" type="mesh" mesh="tote_530x410x240_visual_bottom" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_horizontal_neg" type="mesh" mesh="tote_530x410x240_visual_rib_horizontal_neg" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_horizontal_pos" type="mesh" mesh="tote_530x410x240_visual_rib_horizontal_pos" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_neg_0" type="mesh" mesh="tote_530x410x240_visual_rib_neg_0" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_neg_1" type="mesh" mesh="tote_530x410x240_visual_rib_neg_1" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_neg_2" type="mesh" mesh="tote_530x410x240_visual_rib_neg_2" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_neg_3" type="mesh" mesh="tote_530x410x240_visual_rib_neg_3" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_pos_0" type="mesh" mesh="tote_530x410x240_visual_rib_pos_0" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_pos_1" type="mesh" mesh="tote_530x410x240_visual_rib_pos_1" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_pos_2" type="mesh" mesh="tote_530x410x240_visual_rib_pos_2" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rib_pos_3" type="mesh" mesh="tote_530x410x240_visual_rib_pos_3" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rim_neg_x" type="mesh" mesh="tote_530x410x240_visual_rim_neg_x" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rim_neg_y" type="mesh" mesh="tote_530x410x240_visual_rim_neg_y" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rim_pos_x" type="mesh" mesh="tote_530x410x240_visual_rim_pos_x" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_rim_pos_y" type="mesh" mesh="tote_530x410x240_visual_rim_pos_y" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_above_groove" type="mesh" mesh="tote_530x410x240_visual_wall_neg_above_groove" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_below_groove" type="mesh" mesh="tote_530x410x240_visual_wall_neg_below_groove" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_groove_backing" type="mesh" mesh="tote_530x410x240_visual_wall_neg_groove_backing" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_groove_ceiling" type="mesh" mesh="tote_530x410x240_visual_wall_neg_groove_ceiling" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_groove_end_left" type="mesh" mesh="tote_530x410x240_visual_wall_neg_groove_end_left" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_groove_end_right" type="mesh" mesh="tote_530x410x240_visual_wall_neg_groove_end_right" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_groove_floor" type="mesh" mesh="tote_530x410x240_visual_wall_neg_groove_floor" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_side_left" type="mesh" mesh="tote_530x410x240_visual_wall_neg_side_left" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_side_right" type="mesh" mesh="tote_530x410x240_visual_wall_neg_side_right" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_neg_y" type="mesh" mesh="tote_530x410x240_visual_wall_neg_y" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_above_groove" type="mesh" mesh="tote_530x410x240_visual_wall_pos_above_groove" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_below_groove" type="mesh" mesh="tote_530x410x240_visual_wall_pos_below_groove" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_groove_backing" type="mesh" mesh="tote_530x410x240_visual_wall_pos_groove_backing" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_groove_ceiling" type="mesh" mesh="tote_530x410x240_visual_wall_pos_groove_ceiling" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_groove_end_left" type="mesh" mesh="tote_530x410x240_visual_wall_pos_groove_end_left" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_groove_end_right" type="mesh" mesh="tote_530x410x240_visual_wall_pos_groove_end_right" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_groove_floor" type="mesh" mesh="tote_530x410x240_visual_wall_pos_groove_floor" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_side_left" type="mesh" mesh="tote_530x410x240_visual_wall_pos_side_left" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_side_right" type="mesh" mesh="tote_530x410x240_visual_wall_pos_side_right" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_visual_wall_pos_y" type="mesh" mesh="tote_530x410x240_visual_wall_pos_y" material="tote_530x410x240_blue" contype="0" conaffinity="0" group="1" mass="0" />
+      <geom name="tote_530x410x240_collision_bottom" type="mesh" mesh="tote_530x410x240_collision_bottom" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_rim_neg_x" type="mesh" mesh="tote_530x410x240_collision_rim_neg_x" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_rim_neg_y" type="mesh" mesh="tote_530x410x240_collision_rim_neg_y" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_rim_pos_x" type="mesh" mesh="tote_530x410x240_collision_rim_pos_x" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_rim_pos_y" type="mesh" mesh="tote_530x410x240_collision_rim_pos_y" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_above_groove" type="mesh" mesh="tote_530x410x240_collision_wall_neg_above_groove" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_below_groove" type="mesh" mesh="tote_530x410x240_collision_wall_neg_below_groove" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_groove_backing" type="mesh" mesh="tote_530x410x240_collision_wall_neg_groove_backing" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_groove_ceiling" type="mesh" mesh="tote_530x410x240_collision_wall_neg_groove_ceiling" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_groove_end_left" type="mesh" mesh="tote_530x410x240_collision_wall_neg_groove_end_left" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_groove_end_right" type="mesh" mesh="tote_530x410x240_collision_wall_neg_groove_end_right" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_groove_floor" type="mesh" mesh="tote_530x410x240_collision_wall_neg_groove_floor" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_side_left" type="mesh" mesh="tote_530x410x240_collision_wall_neg_side_left" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_side_right" type="mesh" mesh="tote_530x410x240_collision_wall_neg_side_right" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_neg_y" type="mesh" mesh="tote_530x410x240_collision_wall_neg_y" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_above_groove" type="mesh" mesh="tote_530x410x240_collision_wall_pos_above_groove" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_below_groove" type="mesh" mesh="tote_530x410x240_collision_wall_pos_below_groove" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_groove_backing" type="mesh" mesh="tote_530x410x240_collision_wall_pos_groove_backing" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_groove_ceiling" type="mesh" mesh="tote_530x410x240_collision_wall_pos_groove_ceiling" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_groove_end_left" type="mesh" mesh="tote_530x410x240_collision_wall_pos_groove_end_left" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_groove_end_right" type="mesh" mesh="tote_530x410x240_collision_wall_pos_groove_end_right" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_groove_floor" type="mesh" mesh="tote_530x410x240_collision_wall_pos_groove_floor" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_side_left" type="mesh" mesh="tote_530x410x240_collision_wall_pos_side_left" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_side_right" type="mesh" mesh="tote_530x410x240_collision_wall_pos_side_right" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom name="tote_530x410x240_collision_wall_pos_y" type="mesh" mesh="tote_530x410x240_collision_wall_pos_y" rgba="0 0 0 0" contype="2" conaffinity="1" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" />
+      <geom type="box" rgba="0 0 0 0" contype="4" conaffinity="12" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" name="tote_530x410x240_stack_support_bottom" pos="0 0 0.0025" size="0.265000 0.205000 0.0025" />
+      <geom type="box" rgba="0 0 0 0" contype="4" conaffinity="12" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" name="tote_530x410x240_stack_support_rim_neg_x" pos="-0.263000 0 0.231000" size="0.009 0.194000 0.009" />
+      <geom type="box" rgba="0 0 0 0" contype="4" conaffinity="12" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" name="tote_530x410x240_stack_support_rim_pos_x" pos="0.263000 0 0.231000" size="0.009 0.194000 0.009" />
+      <geom type="box" rgba="0 0 0 0" contype="4" conaffinity="12" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" name="tote_530x410x240_stack_support_rim_neg_y" pos="0 -0.203000 0.231000" size="0.272000 0.009 0.009" />
+      <geom type="box" rgba="0 0 0 0" contype="4" conaffinity="12" friction="0.35 0.005 0.0001" solref="0.020 1" solimp="0.90 0.95 0.001" group="3" mass="0" name="tote_530x410x240_stack_support_rim_pos_y" pos="0 0.203000 0.231000" size="0.272000 0.009 0.009" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,51 @@
+basic_info:
+  scene_id: palletizing_depalletizing_001
+  scene_name: 拆码垛测试场景
+  base_model_path: "./palletizing_depalletizing_001.xml"
+
+layout_name: layout003
+
+robots:
+  - robot_name: r1_pro_chassis
+    robot_id: 1
+    position: [0, 0, 0.01]
+    rotation: [0, 0, 0]
+    sensor_name: camera
+  # - robot_name: r1_pro_chassis
+  #   robot_id: 2
+  #   position: [1, 0, 0.01]
+  #   rotation: [0, 0, 0]
+  #   sensor_name: camera
+
+sensors:
+
+  - sensor_name: camera
+    sensor_type: camera
+    width: 640
+    height: 480
+    camera_intrinsics:
+      sensorsize: [0.004, 0.003]
+      focalpixel: [385.57, 385.01]
+      principalpixel: [327.58, 238.69]
+    fps: 15
+    flip_horizontal: false
+    flip_vertical: false
+    save_frequency: 10.0
+    buffer_size: 5
+    auto_save_loop_enabled: false
+    max_record_duration: 30.0
+    max_record_frequency: 10.0
+    max_photo_frequency: 1.0
+    storage_quota_mb: 1024.0
+    ros_topic_pub: true
+
+simulation_params:
+  timestep: 0.001
+  gravity: [0, 0, -9.81]
+
+viewer:
+  fixed_camera_name: ""
+  azimuth: 120
+  elevation: -25
+  distance: 10.0
+  lookat: [0.5, 0.0, 0.8]

@@ -1,0 +1,19 @@
+<mujoco>
+  <asset>
+    <mesh name="shop" content_type="model/stl" file="./meshes/shop.stl" scale="1 1 1"/>
+  </asset>
+  <worldbody>
+    <body name="shop" pos="-1 0 1" quat="0.7071  0  0  0.7071">
+
+      <geom name="desk" type="box"
+            pos="0 0 0.0" size="2 0.1 1"/>
+      <geom name="shelving" type="box"
+            pos="0 -0.3 0.0" size="2 0.2 0.1"/>
+      <geom name="board" type="box"
+            pos="0 -3 0" size="2 0.3 0.1"/>
+      <geom name="leg" type="box"
+            pos="0 -3 -0.5" size="2 0.1 0.5"/>
+      
+    </body>
+  </worldbody>
+</mujoco>

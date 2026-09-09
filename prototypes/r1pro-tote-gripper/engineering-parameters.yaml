@@ -1,0 +1,112 @@
+schema_version: 1
+coordinate_convention:
+  length_authoring: mm
+  runtime_length: metre
+  mass: kilogram
+  force: newton
+  world: right-handed-z-up
+  quaternion: xyzw
+
+design_limits:
+  gross_payload_kg:
+    value: 8.0
+    evidence: provisional
+  normal_clamp_force_n:
+    value: 60.0
+    evidence: provisional
+  peak_clamp_force_n:
+    value: 120.0
+    evidence: provisional
+  hook_working_load_n_per_side:
+    value: 120.0
+    evidence: provisional
+  hook_proof_load_n_per_side:
+    value: 250.0
+    evidence: provisional
+  mechanical_travel_mm:
+    value: 40.0
+    evidence: design
+  software_travel_mm:
+    value: [0.0, 35.0]
+    evidence: design
+
+tote_family:
+  common:
+    wall_thickness_mm: {value: 4.0, evidence: assumed}
+    bottom_thickness_mm: {value: 5.0, evidence: assumed}
+    rim_height_mm: {value: 18.0, evidence: assumed}
+    rim_overhang_mm: {value: 7.0, evidence: assumed}
+    vertical_rib_width_mm: {value: 12.0, evidence: assumed}
+    vertical_rib_depth_mm: {value: 5.0, evidence: assumed}
+    horizontal_rib_height_mm: {value: 10.0, evidence: assumed}
+    # 参考视频中的抓取接口是箱体短边壁板自身形成的水平凹槽，没有额外的
+    # 独立横条。下钩脚进入凹槽并在短上移后贴住槽内上表面，上夹片同时压住箱沿上表面。
+    grasp_groove_width_mm: {value: 230.0, evidence: video-reference}
+    grasp_groove_height_mm: {value: 30.0, evidence: video-reference-provisional}
+    grasp_groove_depth_mm: {value: 26.0, evidence: reviewed-provisional}
+    grasp_groove_top_offset_mm: {value: 86.0, evidence: tool-interface}
+    plastic_density_kg_m3: {value: 950.0, evidence: assumed-hdpe}
+    sliding_friction: {value: 0.35, evidence: provisional}
+    torsional_friction: {value: 0.005, evidence: provisional}
+    rolling_friction: {value: 0.0001, evidence: provisional}
+  variants:
+    tote-600x400x340:
+      outer_size_mm: [600.0, 400.0, 340.0]
+      empty_mass_kg: {value: 3.2, evidence: assumed}
+      color_rgba: [0.02, 0.22, 0.82, 1.0]
+    tote-530x410x240:
+      outer_size_mm: [530.0, 410.0, 240.0]
+      empty_mass_kg: {value: 2.5, evidence: assumed}
+      color_rgba: [0.02, 0.22, 0.82, 1.0]
+
+gripper:
+  design_id: r1pro-dual-tote-hook-clamp-v1
+  sizing_policy: fixed-tool-standardized-tote-interface
+  geometry_revision: photo-review-v3
+  supported_tote_variants: [tote-600x400x340, tote-530x410x240]
+  variant_adaptation: tote-interface-only-no-tool-resize
+  wrist_envelope_reference_mm: [105.47, 102.39, 60.0]
+  wrist_envelope_source: crystal天猫.stp-bounding-box-only
+  adapter_plate_mm: [10.0, 56.0, 58.0]
+  connector_horizontal_length_mm: 48.0
+  connector_vertical_drop_mm: 48.0
+  connector_width_mm: 46.0
+  connector_wrist_height_mm: 42.0
+  contact_frame_mm: [22.0, 78.0, 104.0]
+  lower_hook_width_mm: 34.0
+  lower_hook_drop_mm: 30.0
+  lower_hook_insert_mm: 28.0
+  lower_hook_thickness_mm: 6.0
+  groove_backing_clearance_mm: 2.0
+  closed_contact_span_mm: 86.0
+  interface_span_tolerance_mm: 2.0
+  upper_clamp_pad_mm: [30.0, 56.0, 7.0]
+  upper_clamp_carriage_mm: [12.0, 52.0, 32.0]
+  upper_clamp_inboard_overlap_mm: 14.0
+  upper_clamp_vertical_travel_mm: 35.0
+  upper_clamp_preload_travel_mm: 4.0
+  upper_clamp_position_kp_n_per_m: 5000.0
+  upper_clamp_position_kd_ns_per_m: 55.0
+  minimum_stable_hook_force_n: 1.0
+  # 4 mm机械预压行程与5000 N/m位置刚度对应20 N理论上限。真实多箱
+  # 外拉中5 N标定只建立约1 mm预压，箱体明显滞后于工具并最终脱钩；
+  # 15 N保留1 mm机械余量且远低于60 N额定力。这是夹具设备标定值，
+  # 不是箱型、层高或仿真帧数相关的Skill阈值。
+  minimum_stable_clamp_force_n: 15.0
+  replaceable_tip_mm: [28.0, 52.0, 4.0]
+  assumed_mass_kg: 1.05
+  drive: 24-or-48v-bldc-with-leadscrew
+  feedback:
+    - motor_encoder
+    - drive_current_or_force
+    - hook_seated_switch
+    - clamp_arrival
+
+unresolved_measurements:
+  - r1_pro_wrist_flange_and_bolt_pattern
+  - r1_pro_wrist_allowable_force_and_moment
+  - tote_grasp_groove_exact_width_height_depth_and_corner_radius
+  - tote_empty_and_full_mass_and_centre_of_mass
+  - tote_material_static_and_dynamic_friction
+  - allowable_wall_deformation
+  - actuator_reducer_and_force_sensor_part_numbers

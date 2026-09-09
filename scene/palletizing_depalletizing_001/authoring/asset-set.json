@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "asset_catalog_version": "0.4.0-dev.0",
+  "allowed_asset_tags": ["native-mujoco"],
+  "catalog_entries": ["r1-pro-chassis", "box", "pallet", "target"],
+  "locked_asset_ids": ["robot-r1-pro-chassis-v1"],
+  "notes": "Project Layout 可以使用登记集合中的任意兼容素材，不限于官方 Layout 已出现的素材。"
+}

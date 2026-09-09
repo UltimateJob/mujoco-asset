@@ -1,0 +1,11 @@
+<mujoco>
+  <asset>
+    <mesh name="polyhedron" content_type="model/stl" file="./meshes/polyhedron.stl" scale="1 1 1"/>
+  </asset>
+  <worldbody>
+    <body name="polyhedron" pos="-0.7 -1 1.25">
+      <joint type="free"/>
+      <geom type="mesh" mesh="polyhedron" rgba="1 0.2 0.2 1"/>
+    </body>
+  </worldbody>
+</mujoco>

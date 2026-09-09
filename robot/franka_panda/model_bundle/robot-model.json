@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "model_id": "franka_panda",
+  "urdf": "franka_description/robots/panda_arm_hand.urdf",
+  "package_roots": [
+    "."
+  ],
+  "kinematic_root_frame": "panda_link0",
+  "end_effectors": {
+    "hand": "panda_hand"
+  },
+  "disabled_collision_pairs": [
+    [
+      "panda_leftfinger",
+      "panda_rightfinger"
+    ],
+    [
+      "panda_link1",
+      "panda_link3"
+    ]
+  ],
+  "license": {
+    "spdx": "Apache-2.0",
+    "file": "LICENSE",
+    "notice": "NOTICE",
+    "upstream_notice": "UPSTREAM_NOTICE"
+  },
+  "source": {
+    "url": "https://github.com/frankarobotics/franka_ros",
+    "tag": "0.7.0",
+    "revision": "17a4ad25ee0581a028e06c41884080896bc28298",
+    "package": "franka_description"
+  },
+  "derivation": {
+    "derived_file": "franka_description/robots/panda_arm_hand.urdf",
+    "input": "franka_description/robots/panda_arm_hand.urdf.xacro",
+    "tool": "xacro",
+    "tool_version": "2.1.1",
+    "command": "uvx --from xacro==2.1.1 xacro franka_description/robots/panda_arm_hand.urdf.xacro -o panda_arm_hand.urdf",
+    "working_directory": "franka_ros@17a4ad25ee0581a028e06c41884080896bc28298",
+    "requires_ament_package_index": "franka_description",
+    "model_content_modified_after_generation": false
+  },
+  "collision_pair_notes": {
+    "panda_link1|panda_link3": "上游 Xacro 的 safety_distance=0.03 扩大安全体后，这一对在标准 ready 姿态固定重叠；只从 Robot 自碰撞对中排除，环境碰撞仍保留。"
+  },
+  "file_inventory": [
+    {
+      "path": "LICENSE",
+      "bytes": 10173,
+      "role": "upstream-license"
+    },
+    {
+      "path": "UPSTREAM_NOTICE",
+      "bytes": 570,
+      "role": "upstream-notice"
+    },
+    {
+      "path": "franka_description/package.xml",
+      "bytes": 661,
+      "role": "upstream-package-metadata"
+    },
+    {
+      "path": "franka_description/robots/panda_arm_hand.urdf.xacro",
+      "bytes": 408,
+      "role": "upstream-generation-input"
+    },
+    {
+      "path": "franka_description/robots/panda_arm.xacro",
+      "bytes": 11024,
+      "role": "upstream-generation-input"
+    },
+    {
+      "path": "franka_description/robots/hand.xacro",
+      "bytes": 2999,
+      "role": "upstream-generation-input"
+    },
+    {
+      "path": "franka_description/robots/panda_arm_hand.urdf",
+      "bytes": 11750,
+      "role": "derived-xacro-output"
+    },
+    {
+      "path": "franka_description/meshes/visual/finger.dae",
+      "bytes": 51239,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/hand.dae",
+      "bytes": 549239,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link0.dae",
+      "bytes": 1591592,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link1.dae",
+      "bytes": 978473,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link2.dae",
+      "bytes": 998544,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link3.dae",
+      "bytes": 1099883,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link4.dae",
+      "bytes": 1145723,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link5.dae",
+      "bytes": 1438343,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link6.dae",
+      "bytes": 1728753,
+      "role": "upstream-visual-mesh"
+    },
+    {
+      "path": "franka_description/meshes/visual/link7.dae",
+      "bytes": 936416,
+      "role": "upstream-visual-mesh"
+    }
+  ]
+}

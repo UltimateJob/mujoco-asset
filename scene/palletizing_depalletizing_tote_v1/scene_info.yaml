@@ -1,0 +1,49 @@
+basic_info:
+  scene_id: palletizing_depalletizing_tote_v1
+  scene_name: R1 Pro 真实周转箱拆码垛场景
+  base_model_path: ./palletizing_depalletizing_tote_v1.xml
+robots:
+- robot_name: r1_pro_tote_gripper
+  robot_id: 1
+  position:
+  - 0
+  - 0
+  - 0.01
+  rotation:
+  - 0
+  - 0
+  - 0
+  sensor_name: camera
+sensors:
+- sensor_name: camera
+  sensor_type: camera
+  width: 640
+  height: 480
+  camera_intrinsics:
+    sensorsize:
+    - 0.004
+    - 0.003
+    focalpixel:
+    - 385.57
+    - 385.01
+    principalpixel:
+    - 327.58
+    - 238.69
+  fps: 15
+  flip_horizontal: false
+  flip_vertical: false
+simulation_params:
+  timestep: 0.001
+  gravity:
+  - 0
+  - 0
+  - -9.81
+viewer:
+  fixed_camera_name: ''
+  azimuth: 120
+  elevation: -25
+  distance: 6.0
+  lookat:
+  - 0.0
+  - 0.0
+  - 0.8

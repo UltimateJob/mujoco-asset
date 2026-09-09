@@ -1,0 +1,34 @@
+<mujoco model="palletizing_depalletizing_001">
+  <option iterations="50" timestep="0.001" solver="CG" gravity="0 0 -9.81" />
+  <compiler angle="radian" eulerseq="zyx" autolimits="true"/>
+
+  <!-- <include file="../../robot/r1_pro/config/r1_pro.xml"/> -->
+  <!-- <include file="../../robot/r1_pro_no_wheels/config/r1_pro_no_wheels.xml"/> -->
+  <!-- <include file="../../robot/r1_pro_chassis/config/r1_pro_chassis.xml"/> -->
+<!--
+  <include file="../../assets/objects/box.xml"/> -->
+
+  <!-- <include file="../../assets/objects/polyhedron.xml"/>  -->
+
+  <!-- <include file="../../assets/objects/shop.xml"/>  -->
+
+  <asset>
+    <!-- <texture name="texplane" type="2d" builtin="checker" rgb1=".0 .0 .0" rgb2=".8 .8 .8" width="100" height="100" />
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true" />
+    <material name="visualgeom" rgba="0.5 0.9 0.2 1" /> -->
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512" mark="cross" markrgb=".8 .8 .8"/>
+    <texture name="texplane2" type="2d" builtin="checker" rgb1="1 0.3137 0.1843" rgb2="0.0 0.30196 0.38039" width="512" height="512" mark="cross" markrgb=".8 .8 .8"/>
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true"/>
+    <material name="matplane2" reflectance="0.1" texture="texplane2" texrepeat="1 1" texuniform="true"/>
+    <material name="visualgeom" rgba="0.5 0.9 0.2 1"/>
+    <hfield name="hf0" nrow="200" ncol="200" size="10 5 0.2 .1"/>
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+    <geom name="ground" type="plane" pos="0 0 0" size="100 100 0.001" quat="1 0 0 0" material="matplane" condim="3" conaffinity="15" />
+  </worldbody>
+
+</mujoco>

@@ -1,0 +1,23 @@
+Semantic Franka Panda Model Bundle
+
+This model bundle contains files derived from and copied from franka_ros,
+copyright 2017 Franka Emika GmbH, distributed under the Apache License 2.0.
+The complete upstream license is preserved in LICENSE and the original upstream
+notice is preserved verbatim in UPSTREAM_NOTICE.
+
+Upstream source:
+  https://github.com/frankarobotics/franka_ros
+  tag: 0.7.0
+  commit: 17a4ad25ee0581a028e06c41884080896bc28298
+  package: franka_description
+
+Derivative file notice:
+  franka_description/robots/panda_arm_hand.urdf is generated from
+  franka_description/robots/panda_arm_hand.urdf.xacro and its included Xacro
+  files with xacro 2.1.1. The generated robot model content was not manually
+  edited after generation. Semantic-specific manifest and documentation files
+  were added alongside the upstream and derived files.
+
+Franka and Panda names may be trademarks of their respective owner. The Apache
+License does not grant permission to use trade names or trademarks except for
+reasonable attribution of the model source.

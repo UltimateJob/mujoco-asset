@@ -1,0 +1,46 @@
+schema_version: 1
+scene_key: palletizing_depalletizing_001
+catalog:
+  scene_id: native-palletizing-depalletizing
+  name: R1 Pro 拆码垛
+  description: 原生 MuJoCo 双臂移动机器人拆码垛公共场景
+  version: 1.0.0
+  source: mujoco-asset
+  tags: [native-mujoco, palletizing, depalletizing, r1-pro]
+  capabilities: [viewer, rgb, depth, contact, holding]
+  authoring:
+    mode: layout_only
+    template_ref: authoring/scene-template.json
+    asset_set_ref: authoring/asset-set.json
+    preview_camera_ref: authoring/preview-camera.json
+units:
+  length: meter
+  angle: radian
+  time: second
+  source_quaternion: wxyz
+  public_quaternion: xyzw
+coordinate_frame: world
+layouts:
+  layout001:
+    name: 布局 001
+    seed: 1001
+    expected_objects: [box-a1, box-a2, pallet1, pallet2, target]
+  layout002:
+    name: 布局 002
+    seed: 1002
+    expected_objects: [box-a1, box-a2, box-a3, pallet1, pallet2, target]
+  layout003:
+    name: 布局 003
+    seed: 1003
+    expected_objects:
+      [box-a1, box-a2, box-a3, pallet1, pallet2, target,
+       box-a1b, box-a2b, box-a3b, pallet1b, pallet2b]
+robots:
+  - model: r1_pro_chassis
+    profile: ../../robot/r1_pro_chassis/config/semantic_robot_profile.yaml
+sources:
+  scene_and_layouts: Semantic 项目自有拆码垛场景
+  r1_pro: Semantic 项目 R1 Pro 仿真模型
+release_notes:
+  - mesh、材质和机器人模型的对外分发范围需要在发布 MR 中逐项确认
+  - 未完成来源检查前仅用于内部开发和测试

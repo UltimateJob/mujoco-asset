@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.orig
+*.rej
+.DS_Store
+# Externally obtained Galaxea models and local adaptations are not redistributable here.
+/robot/r1_pro/
+/robot/r1_pro_chassis/
+/robot/r1_pro_no_wheels/
+/robot/r1_pro_tote_gripper/
