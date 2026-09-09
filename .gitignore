@@ -4,8 +4,5 @@ __pycache__/
 *.orig
 *.rej
 .DS_Store
-# Externally obtained Galaxea models and local adaptations are not redistributable here.
-/robot/r1_pro/
-/robot/r1_pro_chassis/
-/robot/r1_pro_no_wheels/
-/robot/r1_pro_tote_gripper/
+# Keep locally imported variants outside the approved baseline out of Git.
+/robot/r1_pro_local/

@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-> 公开版本不包含星海图模型。R1 Pro 场景需[另行准备模型](EXTERNAL_MODELS.md)；默认资产目录仅登记自制 box/pallet/target。
+> 已确认发布的旧业务 R1 Pro 模型通过 Git LFS 下载。参见[模型下载与来源说明](EXTERNAL_MODELS.md)。第三方模型权利不由本仓库 Apache-2.0 许可证覆盖。
 
 🌐 Semantic MuJoCo Runtime 使用的场景、机器人与物体资产。本仓库不是可执行程序，也不是 Python 环境。
 
@@ -22,6 +22,7 @@
 git lfs install
 git lfs pull
 git lfs fsck
+python3 check_external_models.py
 python3 -m json.tool asset-catalog.v1.json > /dev/null
 ```
 

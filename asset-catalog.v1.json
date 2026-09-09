@@ -3,6 +3,26 @@
   "catalog_version": "0.4.0-dev.0",
   "entries": [
     {
+      "catalog_id": "r1-pro-chassis",
+      "label": "R1 Pro",
+      "node_kind": "robot",
+      "tags": ["native-mujoco", "r1pro"],
+      "asset": {
+        "id": "robot-r1-pro-chassis-v1",
+        "asset_key": "robot/r1_pro_chassis/config/r1_pro_chassis.xml",
+        "kind": "robot",
+        "metadata": {"model": "r1_pro_chassis"}
+      },
+      "preview": {
+        "shape": "box", "size": [0.8, 0.55, 1.2],
+        "color": "#315cec", "placeholder": true
+      },
+      "default_properties": {"model": "r1_pro_chassis", "sensor_names": ["camera"]},
+      "source": "Galaxea Dynamics; Semantic maintenance adaptation; see ASSET_PROVENANCE.md",
+      "license": "See ASSET_PROVENANCE.md; third-party terms apply",
+      "distribution_status": "redistributable"
+    },
+    {
       "catalog_id": "box",
       "label": "Box",
       "node_kind": "object",

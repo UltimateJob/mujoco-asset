@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-> Galaxea robot models are excluded. R1 Pro scenes require [external model setup](EXTERNAL_MODELS.md); the public catalog contains only original box/pallet/target assets.
+> The approved R1 Pro maintenance models are available through Git LFS. See [model download and provenance](EXTERNAL_MODELS.md). Third-party model rights are separate from the repository's Apache-2.0 license.
 
 🌐 Scene, robot, and object assets for Semantic's MuJoCo Runtime. This is an asset repository, not an executable application or a Python environment.
 
@@ -22,6 +22,7 @@ Install Git LFS before fetching the asset payloads. From this repository:
 git lfs install
 git lfs pull
 git lfs fsck
+python3 check_external_models.py
 python3 -m json.tool asset-catalog.v1.json > /dev/null
 ```
 

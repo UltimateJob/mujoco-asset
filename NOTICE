@@ -4,3 +4,8 @@ Copyright 2026 InsightOS
 This notice covers InsightOS-owned source files marked Apache-2.0.
 Third-party code and assets retain their own copyrights and licenses.
 See LICENSE_SCOPE.md for exclusions and provenance-review boundaries.
+
+R1 Pro robot models originate from Galaxea Dynamics (星海图).
+Semantic-specific chassis and tote/gripper adaptations retain that attribution.
+See ASSET_PROVENANCE.md and EXTERNAL_MODELS.md for scope and download instructions.
+No Galaxea endorsement or blanket Apache-2.0 relicensing is implied.

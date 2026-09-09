@@ -9,3 +9,4 @@ This is not a blanket relicensing of third-party code, dependencies, generated f
 ## Specifically preserved paths
 
 - `robot/franka_panda/model_bundle/`
+- `robot/r1_pro/`, `robot/r1_pro_chassis/`, `robot/r1_pro_no_wheels/`, `robot/r1_pro_tote_gripper/`: Galaxea-based models and Semantic adaptations; see [provenance](ASSET_PROVENANCE.md). These assets are not relicensed as Apache-2.0.

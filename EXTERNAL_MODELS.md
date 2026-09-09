@@ -1,48 +1,41 @@
-# External robot models / 外部机器人模型
+# R1 Pro models / R1 Pro 模型
 
-Galaxea R1 Pro models are **not distributed** in this public snapshot, Git LFS,
-or a model download mirror. Obtain the models from the
-[official Galaxea URDF repository](https://github.com/userguide-galaxea/URDF/tree/galaxea/main/R1Pro)
-and review its applicable terms. InsightOS is discussing redistribution permission
-separately; attribution alone is not treated as permission.
+The approved maintenance models are stored in Git LFS, including their XML/URDF,
+metadata, profiles and meshes. The project owner confirmed communication with the
+rights holder and instructed their publication on 2026-09-10. See
+[provenance and scope](ASSET_PROVENANCE.md) and [license scope](LICENSE_SCOPE.md).
+Galaxea assets are not relicensed under the repository's Apache-2.0 license.
 
-The reviewed upstream reference is revision
-`343902060f14622b6048d63b698423443eb4c26d`, not a verified drop-in replacement for
-this release. The upstream 2025/2026 URDFs differ from the Semantic-adapted MuJoCo
-models. Do not silently replace the validated robot with a newer model.
+## Download
 
-## Local integration
+After selecting the asset revision pinned by quick-start:
 
-For R1 Pro examples, prepare a licensed, compatible local MuJoCo adaptation with
-the following layout under this asset repository:
-
-```text
-robot/r1_pro_chassis/config/r1_pro_chassis.xml
-robot/r1_pro_chassis/meta.json
-robot/r1_pro_chassis/meshes/...
-robot/r1_pro_tote_gripper/config/r1_pro_tote_gripper.xml
-robot/r1_pro_tote_gripper/config/semantic_robot_profile.yaml
-robot/r1_pro_tote_gripper/meshes/...
+```bash
+git lfs install
+git lfs pull -I "" -X ""
+git lfs fsck
+python3 check_external_models.py
 ```
 
-The adaptation must preserve the scene's joint/body/site names, mesh references,
-actuation and kinematic conventions. A downloaded URDF cannot simply be renamed
-to one of these XML files. The prototype tools can generate the project's custom
-tote/gripper geometry, but do not supply or license the missing base robot.
-Other R1 Pro variants use `robot/r1_pro/` and `robot/r1_pro_no_wheels/`.
+Quick-start steps 2.2–2.4 select the revision, fetch all payloads and verify the
+required model files. GitHub's ordinary source ZIP may contain LFS pointers; use
+Git + Git LFS for this workflow. Do not use the older model-free asset tag.
 
-These directories are ignored by Git. Keep local models out of commits, LFS,
-public archives and mirrors. `python3 check_external_models.py` checks the minimum
-local integration files; it is not a license or simulation compatibility validator.
-R1 Pro scenes and their source templates remain as integration examples and need
-these separately obtained assets. Server/Web/source builds remain available.
+The four restored directories are `robot/r1_pro/`, `robot/r1_pro_chassis/`,
+`robot/r1_pro_no_wheels/` and `robot/r1_pro_tote_gripper/`. Keep them together:
+the tote/gripper model references meshes in the chassis directory. The files are
+the existing Semantic-compatible baseline, not a replacement with newer models.
+
+Official upstream reference: [Galaxea Dynamics URDF](https://github.com/userguide-galaxea/URDF).
+An official URDF is not necessarily a drop-in replacement for these MuJoCo XMLs.
+Missing payloads or unresolved pointers must be fixed before starting simulation.
 
 ## 中文
 
-公开版本不包含星海图 R1 Pro 模型，也不提供网盘或 OSS 镜像。请从上方官方链接
-自行获取并遵守其使用条款。官方 URDF 与当前 Semantic 的 MuJoCo 适配模型并不相同，
-需要完成关节、坐标系、Mesh 路径、执行器和语义接口的适配，不能直接改后缀使用。
+旧业务 R1 Pro 模型现已通过 Git LFS 提供，包括 XML、URDF、配置与 Mesh。
+项目所有者已确认与对方沟通并要求发布；来源与声明见上方文档，不以 Apache-2.0
+覆盖第三方权利。模型文件保持原有版本，不替换为最新官方模型。
 
-本仓库保留场景和自制对象；R1 Pro 仿真示例需要补齐上述本地模型才能运行。
-安装器会检查缺失项并给出指引，不会将未就绪的仿真报告为初始化成功。
-模型目录已加入 Git 忽略规则，不应打包进公开制品。
+使用 quick-start 更新后的版本清单，依次执行 2.2、2.3、2.4。手动操作请执行上面的
+命令。不要继续检出先前不含模型的旧资产 tag，也不要将 GitHub 普通源码 ZIP 中的
+LFS 指针当成模型。tote/gripper 依赖 chassis 的网格，请保持目录结构完整。
