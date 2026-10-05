@@ -40,9 +40,9 @@ def robot_idle_controller(model: mujoco.MjModel, data: mujoco.MjData):
 # 绑定全局控制回调（覆盖所有关节）
 mujoco.set_mjcb_control(robot_idle_controller)
 
-
+# ==============================
 # 标准仿真循环（step1+step2模式）
-
+# ==============================
 if __name__ == "__main__":
     with mujoco.viewer.launch(model, data) as viewer:
         # 仿真参数
