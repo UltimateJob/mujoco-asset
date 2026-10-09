@@ -51,3 +51,13 @@ The initial public tag excluded these models while communication was pending.
 The maintenance update restores them following the owner's instruction above.
 See [download instructions](EXTERNAL_MODELS.md). No Galaxea endorsement is implied;
 the repository's Apache-2.0 license does not override Galaxea's asset rights.
+
+## Franka Emika Panda — franka_description
+
+`robot/franka_panda/model_bundle/franka_description/` redistributes the
+[franka_description](https://github.com/frankaemika/franka_ros) package
+(URDF meshes and robot descriptions) from Franka Emika GmbH, licensed under
+Apache-2.0. The upstream LICENSE is restored at
+`robot/franka_panda/model_bundle/franka_description/LICENSE`; copyright and
+all original terms remain with Franka Emika GmbH. No Franka Emika endorsement
+is implied.

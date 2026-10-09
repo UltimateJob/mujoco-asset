@@ -9,3 +9,6 @@ R1 Pro robot models originate from Galaxea Dynamics (星海图).
 Semantic-specific chassis and tote/gripper adaptations retain that attribution.
 See ASSET_PROVENANCE.md and EXTERNAL_MODELS.md for scope and download instructions.
 No Galaxea endorsement or blanket Apache-2.0 relicensing is implied.
+
+Franka Panda robot models are redistributed from Franka Emika GmbH under
+Apache-2.0; see ASSET_PROVENANCE.md and the in-tree LICENSE for details.
