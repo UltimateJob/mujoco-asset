@@ -1,34 +1,49 @@
-# 拆码垛场景资产
+# Depalletizing scene assets
 
-本目录包含三套固定布局。Runtime 通过 `scene_info.yaml` 加载 R1 Pro 和相机，再按
-`layout001.yaml`～`layout003.yaml` 创建托盘、箱体和目标区域。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-- 长度：米
-- 角度：弧度
-- 时间：秒
-- 资产与 MuJoCo XML 四元数：`[w, x, y, z]`
-- Runtime 和 Robot SDK 公共接口四元数：`[x, y, z, w]`
-- 坐标系：`world`
+This directory contains three fixed layouts. The Runtime loads the R1 Pro and
+cameras via `scene_info.yaml`, then creates the pallets, totes, and target
+zones according to `layout001.yaml` through `layout003.yaml`.
 
-`asset-manifest.yaml` 给出每套布局的固定 seed 与预期对象清单。Robot、joint、
-Runtime 读取 Profile 后负责两种顺序的转换，公共接口不得直接返回资产顺序。
+- Length: meters
+- Angles: radians
+- Time: seconds
+- Asset and MuJoCo XML quaternions: `[w, x, y, z]`
+- Runtime and Robot SDK public interface quaternions: `[x, y, z, w]`
+- Coordinate frame: `world`
 
-actuator、site 和 camera 的公共映射位于
-`robot/r1_pro_chassis/config/semantic_robot_profile.yaml`。
+`asset-manifest.yaml` gives the fixed seed and expected object manifest for
+each layout. After reading the Profile, the Robot, joints, and Runtime are
+responsible for converting between the two orderings; public interfaces must
+not directly return the asset ordering.
 
-## 公共场景与 Project Layout
+The public mapping of actuators, sites, and cameras lives in
+`robot/r1_pro_chassis/config/semantic_robot_profile.yaml`.
 
-`authoring/` 是公共只读场景的 Layout 编辑输入，不是另一套 Runtime 资产：
+## Public scenes and Project Layouts
 
-- `scene-template.json` 固定 R1 Pro、预览相机和灯光等不可删除节点；
-- `layouts/layout001.json`～`layout003.json` 是官方只读 Layout；
-- `asset-set.json` 声明 Project Layout 可以使用的兼容素材集合；
-- `preview-camera.json` 固定确定性 SVG 和 Runtime 实拍预览的相机参数。
+`authoring/` is the Layout editing input for the public read-only scene, not
+another set of Runtime assets:
 
-普通用户不能覆盖这些文件，也不能从完全空白世界创建场景。Framework 只会把某个
-官方 Layout 或模板内空白 Layout 复制为 Project 草稿；草稿保存时生成 revision
-对应的 SVG，构建成功后可以再由 Runtime 固定相机生成 PNG/WebP。robosuite 与
-LIBERO 目录不使用本 authoring 输入，第一版保持只读。
+- `scene-template.json` fixes the non-deletable nodes such as the R1 Pro,
+  preview cameras, and lights;
+- `layouts/layout001.json` through `layout003.json` are the official read-only
+  Layouts;
+- `asset-set.json` declares the compatible material set that Project Layouts
+  may use;
+- `preview-camera.json` fixes the camera parameters for the deterministic SVG
+  and the Runtime's photographed preview.
 
-本目录从 `origin/feature/openclaw` 整理。发布前必须在 MR 中确认自有模型以及
-mesh、材质等外部资产的来源和允许分发范围；未确认前只用于内部开发与测试。
+Regular users cannot overwrite these files, nor create scenes from a
+completely blank world. The Framework only copies an official Layout or the
+blank Layout inside the template as a Project draft; saving a draft generates
+the SVG for the corresponding revision, and after a successful build the
+Runtime can additionally generate PNG/WebP with the fixed camera. The
+robosuite and LIBERO directories do not use this authoring input and remain
+read-only in the first version.
+
+This directory was organized from `origin/feature/openclaw`. Before release,
+the MR must confirm the provenance and permitted distribution scope of the
+in-house models as well as external assets such as meshes and materials; until
+confirmed, they are for internal development and testing only.

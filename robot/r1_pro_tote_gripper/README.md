@@ -1,12 +1,21 @@
-# R1 Pro 周转箱夹具变体
+# R1 Pro tote gripper variant
 
-该目录是独立 Robot 资产，不会替换 r1_pro_chassis。左右腕各安装一个固定尺寸
-的 C 型周转箱夹具；同一套夹具通过 0–35 mm 主动压片行程适配两种箱体。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-- 固定下钩进入箱体短边26 mm抓取凹槽并扣住槽沿。
-- 主动上压片只执行低层开合与力限制。
-- q=0 表示夹紧，正方向向上打开。
-- Runtime 只报告位置、力、Hook/Clamp 接触、滑移与稳定承载。
-- 双臂对位、IK、抓取顺序和失败恢复由后续 Robot SDK/Skill 实现。
+This directory is an independent Robot asset and does not replace
+r1_pro_chassis. Each wrist mounts one fixed-size C-frame tote gripper; the
+same gripper fits both tote sizes through a 0–35 mm active pressure-plate
+stroke.
 
-机械参数仍需在真机制造前按腕部法兰、负载和箱体实测数据标定。
+- The fixed lower hooks enter the 26 mm gripping recess on the tote's short
+  side and latch onto the recess edge.
+- The active upper pressure plate only performs low-level open/close and force
+  limiting.
+- q=0 means clamped; the positive direction opens upward.
+- The Runtime only reports position, force, Hook/Clamp contacts, slip, and
+  stable carrying.
+- Dual-arm alignment, IK, grasp ordering, and failure recovery are implemented
+  by the subsequent Robot SDK/Skill.
+
+The mechanical parameters still need to be calibrated against wrist flange,
+payload, and tote measurements before real-machine manufacturing.

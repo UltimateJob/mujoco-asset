@@ -1,23 +1,25 @@
-# Franka Panda 模型包
+[English](MODEL_BUNDLE.md) | [简体中文](MODEL_BUNDLE.zh-CN.md)
 
-这个目录是 Robot SDK 使用的正式运动学模型包。它是独立资产，不来自 `.venv`，
-也不要求 SDK 在 robosuite、Isaac Sim 或 ROS 安装目录中搜索模型。
+# Franka Panda model bundle
 
-## 固定来源
+This directory is the official kinematic model bundle used by the Robot SDK. It is a standalone asset; it does not come from a `.venv`,
+and it does not require the SDK to search for models in robosuite, Isaac Sim, or ROS installation directories.
 
-- 上游仓库：`https://github.com/frankarobotics/franka_ros`
-- Tag：`0.7.0`
-- Commit：`17a4ad25ee0581a028e06c41884080896bc28298`
-- 上游包：`franka_description`
-- 许可证：Apache-2.0
-- 运动学根坐标系：`panda_link0`
-- SDK 末端坐标系：`panda_hand`
+## Pinned source
 
-`LICENSE` 是上游根许可证的原样副本，`UPSTREAM_NOTICE` 是上游根 NOTICE 的
-原样副本。本目录的 `NOTICE` 在保留上游声明的同时，说明了派生文件和本项目新增
-的元数据。
+- Upstream repository: `https://github.com/frankarobotics/franka_ros`
+- Tag: `0.7.0`
+- Commit: `17a4ad25ee0581a028e06c41884080896bc28298`
+- Upstream package: `franka_description`
+- License: Apache-2.0
+- Kinematic root frame: `panda_link0`
+- SDK end-effector frame: `panda_hand`
 
-## 目录内容
+`LICENSE` is a verbatim copy of the upstream root license, and `UPSTREAM_NOTICE` is a verbatim copy of the
+upstream root NOTICE. The `NOTICE` in this directory preserves the upstream notices while documenting the derived files and the metadata added
+by this project.
+
+## Directory contents
 
 ```text
 model_bundle/
@@ -35,24 +37,24 @@ model_bundle/
         └── hand.xacro
 ```
 
-碰撞模型由上游 Xacro 中的 Cylinder 和 Sphere 生成，因此本包没有另行复制
-collision mesh。Visual Mesh 保持原有 `package://franka_description/...` 引用和
-目录层级。
+The collision model is generated from the Cylinders and Spheres in the upstream Xacro, so this bundle does not separately copy
+collision meshes. Visual meshes keep their original `package://franka_description/...` references and
+directory hierarchy.
 
-上游入口把 `safety_distance` 设为 `0.03` 米。Pinocchio 建立全部自碰撞对后，
-标准 ready 姿态只出现 `panda_link1` 与 `panda_link3` 的扩大安全体固定重叠；该对
-在 manifest 中被明确排除。其他 Robot 自碰撞和所有环境碰撞仍继续检查。
+The upstream entry sets `safety_distance` to `0.03` meters. After Pinocchio builds all self-collision pairs,
+the standard ready posture shows only the enlarged safety-volume fixed overlap of `panda_link1` and `panda_link3`; that pair
+is explicitly excluded in the manifest. All other Robot self-collisions and all environment collisions are still checked.
 
-导入时共包含 17 个上游或派生文件，元数据写入前的文件总大小为 10,555,790
-字节。每个文件的字节数和用途记录在 `robot-model.json.file_inventory`；最终目录
-大小可使用 `du -sb model_bundle` 重新核对。
+The import includes 17 upstream or derived files in total, and the files totaled 10,555,790
+bytes before metadata was written. Each file's byte count and purpose is recorded in `robot-model.json.file_inventory`; the final directory
+size can be re-verified with `du -sb model_bundle`.
 
-## URDF 生成
+## URDF generation
 
-派生 URDF 使用 xacro 2.1.1 从固定上游 revision 生成。生成环境必须提供
-`franka_description` 的 ament package index；仓库不记录构建主机的临时目录。
+The derived URDF was generated with xacro 2.1.1 from the pinned upstream revision. The generation environment must provide
+the ament package index for `franka_description`; the repository does not record the build host's temporary directories.
 
-可复现生成命令：
+Reproducible generation command:
 
 ```bash
 cd <franka-ros-root>
@@ -63,17 +65,17 @@ uvx --from xacro==2.1.1 xacro \
   -o panda_arm_hand.urdf
 ```
 
-使用的 xacro 版本为 `2.1.1`。`panda_arm_hand.urdf` 的文件头也明确标记它是
-Xacro 自动生成文件；生成后的 Robot 模型内容没有再手工修改。
+The xacro version used is `2.1.1`. The header of `panda_arm_hand.urdf` also explicitly marks it as a
+Xacro auto-generated file; the generated Robot model content has not been manually modified afterwards.
 
-## SDK 验证
+## SDK verification
 
-在 `semantic-robot-sdk` 仓执行：
+In the `semantic-robot-sdk` repo, run:
 
 ```bash
 FRANKA_MODEL_ROOT=/absolute/path/to/robot/franka_panda/model_bundle \
   make test-franka
 ```
 
-该门控会检查 manifest、官方来源、许可证、NOTICE、URDF、Mesh package root、
-`panda_link0` 和 `panda_hand`，然后真实运行 Pinocchio FK、非零 IK 与 Ruckig 轨迹。
+This gate checks the manifest, official source, license, NOTICE, URDF, mesh package root,
+`panda_link0`, and `panda_hand`, then actually runs Pinocchio FK, non-zero IK, and Ruckig trajectories.
