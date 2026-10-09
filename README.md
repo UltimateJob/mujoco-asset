@@ -1,10 +1,15 @@
 # MuJoCo Assets
 
-本仓库保存 Semantic 仿真平台使用的版本化场景、Robot 模型、Mesh、材质和资产目录。代码仓与资产仓保持分离；`plugin-mujoco` 通过资产根目录加载内容，不复制资产，也不依赖宿主机绝对路径。
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+> 🌐 Scene, robot, and object assets used by the Semantic MuJoCo Runtime. This repository is not an executable program, nor a Python environment.
+> The approved legacy R1 Pro models are distributed via Git LFS. See [model downloads and provenance](EXTERNAL_MODELS.md). Third-party model rights are not covered by this repository's Apache-2.0 license.
+
+This repository holds the versioned scenes, Robot models, meshes, materials, and asset catalog used by the Semantic simulation platform. The code repo and the asset repo stay separate; `plugin-mujoco` loads content through the asset root directory — it does not copy assets and does not depend on host absolute paths.
 
 ## Git LFS
 
-Mesh、图片、GLB 和其他大文件由 Git LFS 管理。首次克隆前安装 Git LFS：
+Meshes, images, GLBs, and other large files are managed by Git LFS. Install Git LFS before the first clone:
 
 ```bash
 git lfs install
@@ -13,7 +18,7 @@ cd mujoco_asset
 git lfs pull
 ```
 
-提交前必须确认新增的大文件已成为 LFS 对象：
+Before committing, confirm that newly added large files have become LFS objects:
 
 ```bash
 git lfs status
@@ -21,29 +26,29 @@ git lfs ls-files
 git lfs fsck
 ```
 
-禁止直接提交构建目录、缓存、虚拟环境、Runtime 日志或来源不明的临时二进制。
+Do not commit build directories, caches, virtual environments, Runtime logs, or temporary binaries of unknown origin directly.
 
-## 目录
+## Directory layout
 
 ```text
-assets/                    通用对象资产
-robot/                     Robot 模型、Mesh 与语义映射
-scene/                     Scene Package、Layout 与 authoring 模板
-asset-catalog.v1.json      Framework 使用的版本化资产目录
+assets/                    generic object assets
+robot/                     Robot models, meshes, and semantic mappings
+scene/                     Scene Packages, Layouts, and authoring templates
+asset-catalog.v1.json      versioned asset catalog used by the Framework
 ```
 
-拆码垛场景位于 `scene/palletizing_depalletizing_001`，包含三套官方 Layout、authoring 模板和资产清单。Franka Panda 的版本化运动学模型包位于 `robot/franka_panda/model_bundle`。
+The depalletizing scene is at `scene/palletizing_depalletizing_001` and includes three official Layouts, authoring templates, and an asset manifest. The versioned kinematic model bundle for Franka Panda is at `robot/franka_panda/model_bundle`.
 
-## Scene Package 扩展
+## Extending Scene Packages
 
-每个公共 Native 场景是 `scene/<scene_key>/` 下的独立 Scene Package：
+Each public native scene is an independent Scene Package under `scene/<scene_key>/`:
 
-- `asset-manifest.yaml` 是目录索引的唯一公共清单，声明稳定 ID、版本、Layout、能力和 authoring 约束；
-- `scene_info.yaml` 只保存 Runtime 加载参数、Robot、Sensor 和物理设置；
-- `layout*.yaml` 保存官方只读 Layout；
-- `authoring/` 保存可派生 Layout 的模板和兼容素材集合。
+- `asset-manifest.yaml` is the sole public manifest of the directory index, declaring stable IDs, versions, Layouts, capabilities, and authoring constraints;
+- `scene_info.yaml` holds only Runtime loading parameters, Robots, Sensors, and physics settings;
+- `layout*.yaml` holds the official read-only Layouts;
+- `authoring/` holds the templates from which Layouts can be derived and the compatible material set.
 
-新增 Scene Package 不需要修改 Runtime 源码。安装或升级内容后重新生成冻结目录：
+Adding a Scene Package requires no Runtime source changes. After installing or upgrading content, regenerate the frozen catalog:
 
 ```bash
 mujoco-runtime catalog index \
@@ -52,11 +57,11 @@ mujoco-runtime catalog index \
   --output /installation/content/catalog.yaml
 ```
 
-Runtime 启动后只读取该冻结目录，不扫描资产仓。旧 `scene/scene_list.json` 已删除，避免与 `asset-manifest.yaml`、`scene_info.yaml` 和素材目录形成重复事实来源。
+Once started, the Runtime reads only this frozen catalog and does not scan the asset repo. The old `scene/scene_list.json` has been removed to avoid duplicate sources of truth alongside `asset-manifest.yaml`, `scene_info.yaml`, and the material directories.
 
-## 使用
+## Usage
 
-开发模式下，将本仓库根目录传给 Runtime：
+In development mode, pass this repository's root directory to the Runtime:
 
 ```bash
 MUJOCO_ASSET_ROOT=/absolute/path/to/mujoco_asset \
@@ -64,17 +69,17 @@ MUJOCO_SCENE_CATALOG=/absolute/path/to/catalog.yaml \
 uv run mujoco-runtime
 ```
 
-正式环境由 RuntimeInstallation 的 `content_refs` 登记资产位置，不要求用户长期设置环境变量。
+In production, the RuntimeInstallation's `content_refs` register the asset locations; users are not required to set environment variables long-term.
 
-## 资产治理
+## Asset governance
 
-- 每个可发布资产必须具有稳定 ID、来源、许可和分发结论。
-- 坐标使用右手系，长度单位为米，角度单位为弧度，公共四元数顺序为 `xyzw`。
-- 场景引用相对路径，禁止写入开发主机路径。
-- 发布版本不可覆盖；变更通过新版本或新 Layout 交付。
-- `source: unknown`、`license: pending` 或 `distribution_status: internal-only` 的资产只能用于内部开发与验收，不能作为公开制品分发。
+- Every publishable asset must have a stable ID, provenance, license, and distribution conclusion.
+- Coordinates are right-handed, lengths are in meters, angles in radians, and public quaternion order is `xyzw`.
+- Scenes reference relative paths; writing developer-host paths is forbidden.
+- Published versions cannot be overwritten; changes are delivered as new versions or new Layouts.
+- Assets marked `source: unknown`, `license: pending`, or `distribution_status: internal-only` may only be used for internal development and acceptance, and cannot be distributed as public artifacts.
 
-## 提交检查
+## Pre-commit checks
 
 ```bash
 git diff --check
@@ -82,4 +87,48 @@ git lfs fsck
 python -m json.tool asset-catalog.v1.json >/dev/null
 ```
 
-XML、URDF、JSON、YAML 和场景 Layout 还应由 `plugin-mujoco` 的 native 集成测试完成实际加载验证。
+XML, URDF, JSON, YAML, and scene Layouts should also be verified by actual loading through `plugin-mujoco`'s native integration tests.
+
+## Project layout
+
+- `assets/`: reusable object assets.
+- `robot/`: robot models and meshes.
+- `scene/`: scene packages and layouts.
+- `asset-catalog.v1.json`: asset catalog.
+- `prototypes/`: experimental assets.
+
+## Setup and validation
+
+Install Git LFS first, then pull the assets from this repository:
+
+```bash
+git lfs install
+git lfs pull
+git lfs fsck
+python3 check_external_models.py
+python3 -m json.tool asset-catalog.v1.json > /dev/null
+```
+
+No executables need to be compiled. These commands validate LFS objects and JSON syntax but not full model semantics; selected scenes also need to be load-verified by the MuJoCo Runtime.
+
+## Usage notes
+
+When starting the standalone mujoco-runtime project, set `MUJOCO_ASSET_ROOT` to this repository's absolute path. quick-start registers the asset root into native MuJoCo. Scene / package manifests, referenced meshes, and layouts should be kept complete.
+
+If a mesh file actually contains only a few lines of text, it is usually an LFS pointer. Finish the download first before troubleshooting rendering or model loading problems.
+
+## ⚠️ Distribution boundary
+
+Every distributable asset should have provenance, a license, a stable ID, and a distribution conclusion. Assets with unknown provenance, pending licenses, or marked internal-only **must not be published as public artifacts**.
+
+The Apache license of first-party code does not change the licensing of third-party models or meshes. Keep the original notices and licenses, including the relevant files inside the Franka model bundle.
+
+[Detailed asset reference](README.reference.md) · [License scope](LICENSE_SCOPE.md)
+
+## License
+
+Copyright 2026 InsightOS. First-party code is under [Apache-2.0](LICENSE); see [NOTICE](NOTICE) and [license scope](LICENSE_SCOPE.md) for third-party components and assets.
+
+## Reproducing builds on three platforms
+
+See the [glibc, musl, and macOS build guide](README.build.md): pinned source versions, actual script entries, tool requirements, local and CI commands, artifact locations, and per-platform verification scope.
